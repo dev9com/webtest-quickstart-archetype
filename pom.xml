@@ -1,38 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.dynacrongroup</groupId>
-  <artifactId>webtest-quickstart-archetype</artifactId>
-  <version>1.1-SNAPSHOT</version>
-  <packaging>maven-archetype</packaging>
+    <groupId>com.dynacrongroup</groupId>
+    <artifactId>webtest-quickstart-archetype</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>maven-archetype</packaging>
 
-  <name>webtest-quickstart-archetype</name>
+    <name>webtest-quickstart-archetype</name>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>2.2</version>
-      </extension>
-    </extensions>
+    <description>Archetype for applications using parallel-webtest library
+                to run Selenium tests through Sauce Labs</description>
 
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>2.2</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-  <url>http://www.dynacrongroup.com/about/custom-software-development/github/</url>
+    <developers>
+        <developer>
+            <name>Will Iverson</name>
+            <email>will DOT iverson AT dynacrongroup DOT com</email>
+            <organization>Dynacron Group</organization>
+            <roles>
+                <role>Architect</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>David Drake</name>
+            <email>david DOT drake AT dynacrongroup DOT com</email>
+            <organization>Dynacron Group</organization>
+            <roles>
+                <role>SDET</role>
+            </roles>
+        </developer>
+    </developers>
 
-  <scm>
-    <connection>scm:git:git@github.com:dynacron-group/webtest-quickstart-archetype.git</connection>
-    <developerConnection>scm:git:git@github.com:dynacron-group/webtest-quickstart-archetype.git</developerConnection>
-    <url>scm:git:git@github.com:dynacron-group/webtest-quickstart-archetype.git</url>
-  </scm>
+    <distributionManagement>
+        <repository>
+            <id>cloudbees-private-release-repository</id>
+            <name>CloudBees Repository</name>
+            <url>dav:https://repository-dynacrongroup.forge.cloudbees.com/release/</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <connection>scm:git:git@github.com:dynacron-group/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:git@github.com:dynacron-group/${project.artifactId}.git</developerConnection>
+        <url>scm:git:git@github.com:dynacron-group/${project.artifactId}.git</url>
+    </scm>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <ciManagement>
+        <system>CloudBees</system>
+        <url>tbd</url>
+    </ciManagement>
+
+    <url>http://www.dynacrongroup.com/about/custom-software-development/github/</url>
+
 </project>
