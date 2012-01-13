@@ -55,21 +55,21 @@ Samples
 
  The following sample tests are present in this project:
 
- * <<<com.dynacrongroup.sample.remote.SeleniumSimpleIT>>>
+ * <<<${package}.remote.SeleniumSimpleIT>>>
 
     This test is a simple example of using the parallel-webtest library to run
     a set of selenium tests.  It it designed to test against a remote, always
     available server, so this test could be used as a cut down model for tests
     that run against a Dev, QA, Staging, or Prod server.
 
- * <<<com.dynacrongroup.sample.remote.SeleniumPageObjectIT>>>
+ * <<<${package}.remote.SeleniumPageObjectIT>>>
 
     This test is a more complicated example showing the advantages of using a
     PageObject to model the site under test, instead of writing all tests
     using procedural code.  It is also designed to run against a remote, always
     available web server.
 
- * <<<com.dynacrongroup.sample.local.SeleniumIT>>>
+ * <<<${package}.local.SeleniumIT>>>
 
     This test is a simple example of using the parallel-webtest library to run
     a set of selenium tests.  It it designed to test against a locally
@@ -78,7 +78,7 @@ Samples
     suited to tests that run in a continuous integration environment when
     verifying builds.
 
- * <<<com.dynacrongroup.sample.local.HtmlUnitIT>>>
+ * <<<${package}.local.HtmlUnitIT>>>
 
     This test demonstrates how htmlunit tests can be included alongside
     selenium tests.  This particular test is desgined to run against a

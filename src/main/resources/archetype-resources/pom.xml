@@ -5,8 +5,7 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>war</packaging>
 	<version>${version}</version>
-	<name>webtest-quickstart</name>
-	<url>http://www.dynacrongroup.com/about/custom-software-development/github/</url>
+	<name>${artifactId}</name>
 
 	<properties>
         <!-- This is the default webdriver that will be used for running tests in both
@@ -34,18 +33,7 @@
 		<parallelrun>classes</parallelrun>
 		<threadcount>5</threadcount>
 	</properties>
-	<distributionManagement>
-		<repository>
-			<id>cloudbees-private-release-repository</id>
-			<name>CloudBees Repository</name>
-			<url>dav:https://repository-dynacrongroup.forge.cloudbees.com/release/</url>
-		</repository>
-	</distributionManagement>
-	<scm>
-		<connection>scm:git:git@github.com:dynacron-group/${project.artifactId}.git</connection>
-		<developerConnection>scm:git:git@github.com:dynacron-group/${project.artifactId}.git</developerConnection>
-		<url>scm:git:git@github.com:dynacron-group/${project.artifactId}.git</url>
-	</scm>
+
 	<repositories>
 		<repository>
 			<id>cloudbees</id>
@@ -246,12 +234,12 @@
 						<type>standalone</type>
 						<deployables>
                             <!-- Cargo automatically deploys the project artifact. In this case,
-                                   that would be webtest-quickstart.war. You may also want Tomcat to deploy another
+                                   that would be ${artifactId}.war. You may also want Tomcat to deploy another
                                    WAR.  -->
 							<deployable>
                                 <!-- This ping URL tells Cargo to not consider the server booted until
                                         this URL responds with a 200 -->
-							    <pingURL>http://localhost:8080/webtest-quickstart/</pingURL>
+							    <pingURL>http://localhost:8080/${project.context}/</pingURL>
 								<properties>
 									<context>${project.context}</context>
 								</properties>

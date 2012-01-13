@@ -40,14 +40,5 @@
         <include>**/*.apt</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>.gitignore</include>
-        <include>webtest-quickstart.iml</include>
-        <include>webtest-sample.ipr</include>
-        <include>webtest-sample.iws</include>
-      </includes>
-    </fileSet>
   </fileSets>
 </archetype-descriptor>

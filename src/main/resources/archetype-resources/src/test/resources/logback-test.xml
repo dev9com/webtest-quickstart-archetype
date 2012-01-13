@@ -42,12 +42,7 @@
 		<appender-ref ref="TIMINGFILE" />
 	</logger>
 
-	<!-- Logger that catches events from the Spring framework -->
-	<logger name="org.springframework" level="INFO" additivity="false">
-		<appender-ref ref="testFileAppender" />
-	</logger>
-
-	<logger name="${groupId}.selenium" level="INFO" />
+	<logger name="com.dynacrongroup.selenium" level="INFO" />
 
 	<logger name="${package}" level="DEBUG" />
 
