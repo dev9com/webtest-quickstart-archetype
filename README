@@ -1,4 +1,5 @@
-Archetype used for generating webtest projects, based on webtest-quickstart.
+Archetype used for generating webtest projects, based on webtest-quickstart.  Javadocs located at
+http://repository-dynacrongroup.forge.cloudbees.com/release/sites/webtest-quickstart-archetype/index.html
 
 The following command will generate a project using this project:
 
